@@ -1,1 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Heart Disease Risk Predictor</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>❤️ Heart Disease Risk Predictor</h1>
+    <p>Enter patient details to predict the 10-year heart disease risk.</p>
+
+    <form action="/predict" method="post">
+
+        <!-- 0/1 DropDown Fields -->
+        <label>Sex (0 = Female, 1 = Male)</label>
+        <select name="Sex" required>
+            <option value="0">0 - Female</option>
+            <option value="1">1 - Male</option>
+        </select>
+
+        <label>Current Smoker?</label>
+        <select name="currentSmoker" required>
+            <option value="0">0 - No</option>
+            <option value="1">1 - Yes</option>
+        </select>
+
+        <label>Blood Pressure Medication?</label>
+        <select name="BPMeds" required>
+            <option value="0">0 - No</option>
+            <option value="1">1 - Yes</option>
+        </select>
+
+        <label>Previous Stroke?</label>
+        <select name="prevalentStroke" required>
+            <option value="0">0 - No</option>
+            <option value="1">1 - Yes</option>
+        </select>
+
+        <label>Hypertension?</label>
+        <select name="prevalentHyp" required>
+            <option value="0">0 - No</option>
+            <option value="1">1 - Yes</option>
+        </select>
+
+        <label>Diabetes?</label>
+        <select name="diabetes" required>
+            <option value="0">0 - No</option>
+            <option value="1">1 - Yes</option>
+        </select>
+
+        <!-- Numeric Inputs -->
+        <label>Age</label><input type="number" name="age" min="1" max="120" required>
+        <label>Cigarettes Per Day</label><input type="number" name="cigsPerDay" step="1" min="0">
+        <label>Total Cholesterol</label><input type="number" name="totChol" step="0.1" required>
+        <label>Systolic BP</label><input type="number" name="sysBP" step="0.1" required>
+        <label>Diastolic BP</label><input type="number" name="diaBP" step="0.1" required>
+        <label>BMI</label><input type="number" name="BMI" step="0.1" required>
+        <label>Heart Rate</label><input type="number" name="heartRate" step="1" required>
+        <label>Glucose Level</label><input type="number" name="glucose" step="0.1" required>
+
+        <button type="submit">Predict Risk</button>
+    </form>
+
+    {% if prediction_text %}
+    <div class="result">{{ prediction_text }}</div>
+    {% endif %}
+
+</div>
+</body>
+</html>
 
