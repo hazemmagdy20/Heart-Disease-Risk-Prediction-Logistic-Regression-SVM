@@ -3,10 +3,12 @@ This project aims to predict the 10-year risk of heart disease using patient hea
 
 ## 📌 Project Overview
 
-This project aims to predict the 10-year risk of heart disease using patient health data.
-Multiple machine learning models were trained and evaluated, starting with Logistic Regression, then improving with SVM.
-The goal is to assist in early medical risk detection by identifying individuals with higher chances of developing heart disease.
-This project walks through Data Cleaning → Preprocessing → Handling Imbalance → Model Training → Threshold Optimization → Evaluation → Model Selection for Deployment.
+- This project aims to predict the 10-year risk of heart disease using patient health data.
+- Multiple machine learning models were trained and evaluated, starting with Logistic Regression, then improving with SVM.
+- The goal is to assist in early medical risk detection by identifying individuals with higher chances of developing heart disease.
+- This project walks through:
+   ```python
+   Data Cleaning → Preprocessing → Handling Imbalance → Model Training → Threshold Optimization → Evaluation → Model Selection for Deployment.
 
 ---
 
